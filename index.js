@@ -130,6 +130,5 @@ app.post('/withdraw/:email/:amount', (req, res) => {
 
 
 app.listen(
-    PORT,
     () => console.log(`Live on http://localhost:${PORT}`)
 )
