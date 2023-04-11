@@ -1,4 +1,8 @@
+const functions = require("firebase-functions")
+const cors = require("cors")
 const app = require('express')();
+
+app.use(cors())
 const PORT = 9090;
 
 
@@ -130,5 +134,8 @@ app.post('/withdraw/:email/:amount', (req, res) => {
 
 
 app.listen(
+    PORT,
     () => console.log(`Live on http://localhost:${PORT}`)
 )
+
+exports.app = functions.https.onRequest(app)
