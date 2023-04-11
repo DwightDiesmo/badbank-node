@@ -18,4 +18,4 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MIT_MODULE_30 }}'
           channelId: live
           projectId: mit-module-30
-      - run: firebase server --only functions,hosting
+      # - run: firebase server --only functions,hosting
